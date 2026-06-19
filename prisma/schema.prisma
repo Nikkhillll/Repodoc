@@ -1,0 +1,20 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+model Analysis {
+  id                String   @id @default(cuid())
+  repoUrl           String
+  owner             String
+  repoName          String
+  summary           String
+  techStack         String
+  architecture      String
+  gettingStarted    String
+  readmeSuggestions String
+  createdAt         DateTime @default(now())
+}

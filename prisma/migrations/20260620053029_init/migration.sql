@@ -1,6 +1,6 @@
 -- CreateTable
 CREATE TABLE "Analysis" (
-    "id" TEXT NOT NULL PRIMARY KEY,
+    "id" TEXT NOT NULL,
     "repoUrl" TEXT NOT NULL,
     "owner" TEXT NOT NULL,
     "repoName" TEXT NOT NULL,
@@ -9,5 +9,7 @@ CREATE TABLE "Analysis" (
     "architecture" TEXT NOT NULL,
     "gettingStarted" TEXT NOT NULL,
     "readmeSuggestions" TEXT NOT NULL,
-    "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+
+    CONSTRAINT "Analysis_pkey" PRIMARY KEY ("id")
 );
